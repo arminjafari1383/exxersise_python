@@ -402,3 +402,195 @@
 #     print(result[0],result[1])
 
 #-----------------------------------------
+#34
+# 
+# def find_divisors_count_and_sum(n):
+#     total_count = 0
+#     total_sum = 0
+#     for i in range(1,n + 1):
+#         for j in range(1,int(i ** 0.5) + 1):
+#             if i % j == 0:
+#                 total_count += 1
+#                 total_sum += j
+#                 if j != i // j:
+#                     total_count += 1
+#                     total_sum += i // j
+#     return total_count,total_sum
+
+# n = int(input())
+# count,sum_divisors = find_divisors_count_and_sum(n)
+# print(count,sum_divisors)
+#
+#-------------------------------------------
+#35
+# n = int(input())
+# statuses = [int(input()) for _ in range(n)]
+# count = 0
+# for i in range(1,n):
+#     if statuses[i] != statuses[i - 1]:
+#         count += 1
+# print(count)
+#
+#--------------------------------------------
+#36
+# x1,x2 = map(int,input().split())
+# if x1 == x2:
+#     print("Saal Noo Mobark!")
+# else:
+#     distance = x2 - x1
+#     if distance > 0:
+#         print('R' * distance)
+#     else:
+#         print('L' * (-distance))
+#
+#---------------------------------------------
+#37
+# def printPascal(n:int):
+#     arr = [[0 for x in range(n)]
+#             for y in range(n)]
+#     for line in range(0,n):
+#         for i in range(0,line + 1):
+#             if (i is 0 or i is line):
+#                 arr[line][i] = 1
+#                 print(arr[line][i],end = " ")
+#             else:
+#                 arr[line][i] = (arr[line - 1][i - 1]+
+#                                 arr[line - 1][i])
+#                 print(arr[line][i],end=" ")
+#         print("\n",end="")
+# n = int(input())
+# printPascal(n)
+#
+#----------------------------------------------
+#38
+# def find_steps_to_return(n,k):
+#     position = 0
+#     steps = 0
+#     while True:
+#         position = (position + k) % n
+#         steps += 1
+#         if position == 0:
+#             break
+#     return steps
+# n,k = map(int,input().split())
+# print(find_steps_to_return(n,k))
+#
+#-----------------------------------------------
+#39
+# def mirror_clock(a,b):
+#     real_hour = 12 - a if a != 0 else 12
+#     real_minute = 60 - b if b != 0 else 0
+#     if real_minute == 60:
+#         real_minute = 0
+#         real_hour += 1
+#         if real_hour == 13:
+#             real_hour = 1
+#     if real_hour == 12:
+#         real_hour = 12
+#         real_hour_new = real_hour - 12
+#         return f"{real_hour_new:02}:{real_minute:02}"
+#     return f"{real_hour:02}:{real_minute:02}"
+
+# a,b = map(int,input().split())
+# print(mirror_clock(a,b))
+#
+#-----------------------------------------------
+#40
+# def sum_of_digits(n):
+#     return sum(int(digit) for digit in str(n))
+
+# def is_prime(num):
+#     if num < 2:
+#         return False
+#     for i in range(2,int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             return False
+#         return True
+# def bth_prime_after_n(n,b):
+#     count = 0
+#     current = n + 1
+#     while count < b:
+#         if is_prime(current):
+#             count += 1
+#             if count == b:
+#                 return current
+#         current += 1
+
+#-------------------------------------------------
+#41
+# def game(number):
+#     b = number % 10
+#     c = number // 10
+#     if b > c:
+#         d = b - c
+#         return(d)
+#     else:
+#         d = c - b
+#         return(d)
+
+# print(game(17))
+#
+#--------------------------------------------------
+#42
+# def determine_direction(x,y,x1,y1):
+#     cross_product = (x1 - x)
+#     if cross_product > 0:
+#         print("Right")
+#     else:
+#         print("left")
+    
+# x,y = map(int,input().split())
+# x1,y1 = map(int,input().split())
+# determine_direction(x,y,x1,y1)
+#---------------------------------------------------
+#43
+# n,p,k = input().split()
+# n = int(n)
+# k = float(k)
+# p = int(p)
+# money = n * k * p
+# print(int(money))
+#
+#---------------------------------------------------
+#44
+# def max_jars_to_store(n,k,a):
+#     total_jam = sum(a)
+#     required_jars = (total_jam + k - 1) // k
+#     jars_to_store = n - required_jars
+#     return jars_to_store
+# n,k = map(int,input("").split())
+# a = list(map(int,input("").split()))
+# print(max_jars_to_store(n,k,a))
+#
+#-----------------------------------------------------
+#45
+# word = input().strip()
+# vowels = {'a','e','i','o','u'}
+# vowel_count = sum(1 for char in word if char in vowels)
+# result = 2 ** vowel_count
+# print(result)
+#
+#-----------------------------------------------------
+#46
+# n = int(input())
+# a = list(map,int(input().split()))
+# b = list(map,int(input().split()))
+# total_breaths = 0
+# for i in range(n):
+#     total_breaths += a[i] * b[i]
+# print(total_breaths)
+#
+#-------------------------------------------------------
+#47
+# p,d = map(int,input().split())
+# for i in range(1,1001):
+#     if d * i % p <= p // 2:
+#         print(d * i)
+#         break
+#--------------------------------------------------------
+#48
+# n = int(input())
+# for _ in range():
+#     film_name = input()
+#     formatted_name = film_name.title()
+#     print(formatted_name)
